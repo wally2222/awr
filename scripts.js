@@ -16,7 +16,7 @@ fetchFavMeals();
 // function getRandomMeal
 async function getRandomMeal() {
     const resp = await fetch(
-        "https://www.themealdb.com/api/json/v1/1/random.php"
+        "https://www.themealdb.com/api/json/v1/1/random.php" // fetch data
     );
     const respData = await resp.json();
     // meals api
@@ -28,7 +28,7 @@ async function getRandomMeal() {
 // getMealById()
 async function getMealById(id) {
     const resp = await fetch(
-        "https://www.themealdb.com/api/json/v1/1/lookup.php?i=" + id
+        "https://www.themealdb.com/api/json/v1/1/lookup.php?i=" + id //fetch id
     );
 
     const respData = await resp.json();
@@ -39,7 +39,7 @@ async function getMealById(id) {
 
 async function getMealsBySearch(term) {
     const resp = await fetch(
-        "https://www.themealdb.com/api/json/v1/1/search.php?s=" + term
+        "https://www.themealdb.com/api/json/v1/1/search.php?s=" + term // fetch term
     );
 
     const respData = await resp.json();
@@ -59,7 +59,7 @@ function addMeal(mealData, random = false) {
             ${
                 random
                     ? `
-            <span class="random"> Random Recipe </span>`
+            <span class="random"> Launch Random Recipe </span>`
                     : ""
             }
             <!-- strMealThumb api-->
@@ -71,7 +71,11 @@ function addMeal(mealData, random = false) {
         <div class="meal-body">
             <h4>${mealData.strMeal}</h4>
             <button class="fav-btn">
-                <i class="fas fa-heart"></i>
+                <i  style="font-size : 0.7rem "> + add to fav</i> <br>
+             
+                
+                <i class ="likes" class="fas fa-heart"> 0</i> 
+                <i  onclick="count()" style="font-size : 0.7rem" id="likes"> likes</i>
             </button>
         </div>
     `;
@@ -95,6 +99,7 @@ function addMeal(mealData, random = false) {
     });
 
     mealsEl.appendChild(meal);
+    count()
 }
 
 function addMealLS(mealId) {
@@ -225,3 +230,15 @@ popupCloseBtn.addEventListener("click", () => {
     mealPopup.classList.add("hidden");
     getRandomMeal()
 });
+
+let counter3 = 0;
+        function count() {
+          document.querySelector('.likes').innerHTML = counter3
+          counter3++;
+          if (counter3 % 10 == 0) {
+            alert();
+          }
+        }
+     document.addEventListener('DOMContentLoaded', function () {
+        document.querySelector("#likes").onclick = count; 
+     })
