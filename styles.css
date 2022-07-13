@@ -215,5 +215,5 @@ header button {
 }
 
 input:focus {background-color: #d5d5d5; color:#f6b319}
-@media screen (max-width: 320px) { button {display : inline; box-shadow: 0 0 10px 2px #3333331a;}}
+@media screen (max-width: 320px) { button {display : inline; box-shadow: 0 0 10px 2px #3333331a; border: 1px solid green}}
 
