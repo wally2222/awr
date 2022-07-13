@@ -4,12 +4,9 @@ const favoriteContainer = document.getElementById("fav-meals"); // div
 const mealPopup = document.getElementById("meal-popup"); //id dv
 const mealInfoEl = document.getElementById("meal-info"); //id div
 const popupCloseBtn = document.getElementById("close-popup"); // button
-
-
+// input
 const searchTerm = document.getElementById("search-term"); // input 
 const searchBtn = document.getElementById("search"); // btn
-
-
 
 getRandomMeal();
 fetchFavMeals();
@@ -72,8 +69,6 @@ function addMeal(mealData, random = false) {
             <h4>${mealData.strMeal}</h4>
             <button class="fav-btn">
                 <i  style="font-size : 0.7rem "> + add to fav</i> <br>
-             
-                
                 <i class ="likes" class="fas fa-heart"> 0</i> 
                 <i  onclick="count()" style="font-size : 0.7rem" id="likes"> likes</i>
             </button>
@@ -236,9 +231,17 @@ let counter3 = 0;
           document.querySelector('.likes').innerHTML = counter3
           counter3++;
           if (counter3 % 10 == 0) {
-            alert();
+            alert("You add 10 recipts");
           }
         }
      document.addEventListener('DOMContentLoaded', function () {
-        document.querySelector("#likes").onclick = count; 
+        document.querySelector("h5").onclick = count; 
      })
+
+     function refrech () {; 
+								
+								
+        window.location.reload();
+                   
+   
+}
