@@ -231,7 +231,7 @@ let counter3 = 0;
           document.querySelector('.likes').innerHTML = counter3
           counter3++;
           if (counter3 % 10 == 0) {
-            alert("You add 10 recipts");
+            alert("You add 10 recipts to delete search please presson button : delete search");
           }
         }
      document.addEventListener('DOMContentLoaded', function () {
