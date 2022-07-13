@@ -250,6 +250,6 @@ let counter3 = 0;
 
 function remove() {
     document.querySelector('.fav-meals').innerHTML = ' '
-    alert()
+    alert("Are your sur to delete your favorite meals")
 }
 
