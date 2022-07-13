@@ -214,4 +214,4 @@ header button {
     text-align: center;
 }
 
-input:focus {background-color: white; color:#f6b319}
+input:focus {background-color: #d5d5d5; color:#f6b319}
