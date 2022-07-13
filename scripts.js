@@ -252,3 +252,4 @@ function remove() {
     document.querySelector('.fav-meals').innerHTML = ' '
     alert()
 }
+
