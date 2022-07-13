@@ -11,11 +11,19 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    
     font-family: "Poppins", sans-serif;
     margin: 0;
-    min-height: 100vh;
+    min-height: 90vh;
 }
-
+/*
+body {
+    background-image: url("./jk.png") ;
+    background-position: cover center center;
+    background-color: #cccccc;
+    color: red
+   }
+   */
 img {
     max-width: 100%;
 }
@@ -24,12 +32,15 @@ img {
     background-color: #fff;
     box-shadow: 0 0 10px 2px #3333331a;
     border-radius: 3px;
-    overflow: hidden;
+   overflow: hidden;
     width: 400px;
+    background-image: url('./jk.png') cover ;
+    background-position: center center;
 }
 
 header {
     display: flex;
+    
     align-items: center;
     justify-content: center;
     padding: 1rem;
@@ -61,6 +72,7 @@ header button {
 
 .fav-meals {
     display: flex;
+    
     flex-wrap: wrap;
     justify-content: center;
     list-style-type: none;
@@ -159,7 +171,9 @@ header button {
 
 .popup-container {
     background-color: rgba(0, 0, 0, 0.5);
+    
     display: flex;
+    
     align-items: center;
     justify-content: center;
     position: fixed;
@@ -167,6 +181,7 @@ header button {
     right: 0;
     top: 0;
     bottom: 0;
+    
 }
 
 .popup-container.hidden {
@@ -198,3 +213,5 @@ header button {
 .meal-info h1 {
     text-align: center;
 }
+
+input:focus {background-color: white; color:#f6b319}
