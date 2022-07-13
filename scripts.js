@@ -131,7 +131,8 @@ async function fetchFavMeals() {
         addMealFav(meal);
     }
 }
-
+//
+var favMeal =""
 function addMealFav(mealData) {
     const favMeal = document.createElement("li");
 
@@ -231,7 +232,7 @@ let counter3 = 0;
           document.querySelector('.likes').innerHTML = counter3
           counter3++;
           if (counter3 % 10 == 0) {
-            alert("You add 10 recipts to delete search please presson button : delete search");
+            alert("You add 10 recipts");
           }
         }
      document.addEventListener('DOMContentLoaded', function () {
@@ -244,4 +245,10 @@ let counter3 = 0;
         window.location.reload();
                    
    
+}
+
+
+function remove() {
+    document.querySelector('.fav-meals').innerHTML = ' '
+    alert()
 }
